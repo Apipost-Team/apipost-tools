@@ -1,0 +1,29 @@
+{
+  "files.eol": "\r\n",
+  "workbench.activityBar.visible": true,
+  "eslint.codeAction.showDocumentation": {
+      "enable": true
+  },
+
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  "editor.tabSize": 2,
+  "git.autofetch": true,
+  "eslint.validate": [
+      {
+          "language": "typescript",
+          "autoFix": true
+      },
+      "typescriptreact"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "bracketPairColorizer.depreciation-notice": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.openSideBySideDirection": "down",
+  "git.enableSmartCommit": true,
+  "editor.accessibilitySupport": "off",
+  "html.format.preserveNewLines": false,
+  "window.zoomLevel": 2
+}

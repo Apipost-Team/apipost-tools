@@ -1,0 +1,44 @@
+{
+  "extends": "airbnb-base",
+  "plugins": [
+    "jest"
+  ],
+  "env": {
+    "jest/globals": true
+  },
+  "globals": {
+    "window": true,
+    "dayjs": true
+  },
+  "rules": {
+    "semi": [
+      2,
+      "never"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "no-param-reassign": [
+      0
+    ],
+    "func-names": [
+      0
+    ],
+    "import/no-extraneous-dependencies": [
+      0
+    ],
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": [
+          "apipost-tools"
+        ]
+      }
+    ],
+    "import/extensions": [
+      2,
+      "never"
+    ]
+  }
+}
