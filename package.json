@@ -66,5 +66,9 @@
   },
   "author": "",
   "license": "MIT",
-  "keywords": ["tools", "utils", "apipost-tools"]
+  "keywords": [
+    "tools",
+    "utils",
+    "apipost-tools"
+  ]
 }
