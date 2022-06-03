@@ -12,8 +12,10 @@ npm i apipost-tools
 ```js
 import ATools from 'apipost-tools';
 let json='{"name":"我是一名ApiPost用户"}';
+let email='1030698842@qq.com';
 
 ATools.isJson(json); //true
+ATools.isEmail(email); //true
 ```
 
 
