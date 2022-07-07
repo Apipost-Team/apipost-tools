@@ -1,5 +1,5 @@
 // 成功结果对象
-export const successResult = (status: string, data: any) => {
+export const successResult = (data: any) => {
   return {
     status: 'success',
     data
