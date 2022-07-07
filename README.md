@@ -28,6 +28,8 @@ isJson5 //验证是否为json5格式
 isJsonp //验证是否为jsonp格式
 isHtml //验证是否为html格式
 ms2second //毫秒时间戳转秒时间戳
+formatHtml // 格式化html数据
+jsonp2Obj // jsonp格式转为对象
 ```
 
 
