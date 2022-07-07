@@ -8,8 +8,10 @@ import array2Tree from './array2Tree';
 import isHtml from './isHtml';
 import ms2second from './ms2second';
 import formatXml from './formatXml';
+import formatHtml from './formatHtml';
+import jsonp2Obj from './jsonp2Obj';
 
-export default  {
+export default {
   isJson,
   isJsonp,
   isJson5,
@@ -19,6 +21,8 @@ export default  {
   array2Tree,
   isHtml,
   ms2second,
-  formatXml
+  formatXml,
+  formatHtml,
+  jsonp2Obj
 }
 
