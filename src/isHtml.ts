@@ -4,6 +4,7 @@ export const isHtml = (html: string): boolean => {
 //       html = '';
       return false;
     }
+    html=html.trim();
     const trimmed = html.replace(/^[ \t\n\r]+/, '');
     return Boolean(trimmed) && (trimmed.substring(0, 1) === '<') && (trimmed.charAt(trimmed.length - 1) === '>');
   } catch (error) {
