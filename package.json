@@ -16,6 +16,7 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "core-js": "^3.9.0",
     "html-beautify": "^1.0.4",
+    "json-bigint": "^1.0.0",
     "json5": "^2.2.1",
     "rollup": "^2.74.1",
     "rollup-plugin-commonjs": "^10.1.0",

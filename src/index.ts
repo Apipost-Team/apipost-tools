@@ -7,11 +7,13 @@ import getUrlQueryArray from './getUrlQueryArray';
 import array2Tree from './array2Tree';
 import isHtml from './isHtml';
 import ms2second from './ms2second';
+import isXml from './isXml';
 import formatXml from './formatXml';
 import formatHtml from './formatHtml';
 import jsonp2Obj from './jsonp2Obj';
 import successResult from './successResult';
 import errorResult from './errorResult';
+import beautifyRaw from './beautifyRaw';
 
 export {
   isJson,
@@ -23,11 +25,13 @@ export {
   array2Tree,
   isHtml,
   ms2second,
+  isXml,
   formatXml,
   formatHtml,
   jsonp2Obj,
   successResult,
-  errorResult
+  errorResult,
+  beautifyRaw
 }
 
 
@@ -41,10 +45,12 @@ export default {
   array2Tree,
   isHtml,
   ms2second,
+  isXml,
   formatXml,
   formatHtml,
   jsonp2Obj,
   successResult,
-  errorResult
+  errorResult,
+  beautifyRaw
 }
 
