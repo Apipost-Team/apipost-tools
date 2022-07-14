@@ -12,9 +12,9 @@ export const beautifyRaw = (data: any) => {
   let mode = 'text';
   if (Object.prototype.toString.call(data) === '[object Object]') {  // 传入数据为对象
     try {
-      beautifyRaw = JSONbig.stringify(JSONbig.parse(data), null, '\t');
+      beautifyRaw = JSONbig.stringify(data, null, '\t');
     } catch (error) {
-      beautifyRaw = JSON.stringify(JSON.parse(data), null, '\t');
+      beautifyRaw = JSON.stringify(data, null, '\t');
     }
     mode = 'json';
   } else if (Object.prototype.toString.call(data) === '[object String]') { // 传入数据为字符串
