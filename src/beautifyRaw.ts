@@ -50,6 +50,7 @@ export const beautifyRaw = (data: any) => {
       } catch (error) {
         mode = 'text';
       }
+      beautifyRaw = data;
     }
   } else {
     beautifyRaw = String(data);
