@@ -1,6 +1,6 @@
 {
   "name": "apipost-tools",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "apipost-tools",
   "main": "dist/index.js",
   "files": [
