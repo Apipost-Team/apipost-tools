@@ -14,3 +14,5 @@ const bufferToRaw = function (buffer:any, mime:any) {
         base64: `data:${mime['mime']};base64,${_inflateBuffer.toString('base64')}`
     }
 }
+
+export default bufferToRaw;

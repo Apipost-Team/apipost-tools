@@ -14,6 +14,7 @@ import jsonp2Obj from './jsonp2Obj';
 import successResult from './successResult';
 import errorResult from './errorResult';
 import beautifyRaw from './beautifyRaw';
+import bufferToRaw from './bufferToRaw';
 
 export {
   isJson,
@@ -31,7 +32,8 @@ export {
   jsonp2Obj,
   successResult,
   errorResult,
-  beautifyRaw
+  beautifyRaw,
+  bufferToRaw,
 }
 
 
@@ -51,6 +53,7 @@ export default {
   jsonp2Obj,
   successResult,
   errorResult,
-  beautifyRaw
+  beautifyRaw,
+  bufferToRaw,
 }
 
