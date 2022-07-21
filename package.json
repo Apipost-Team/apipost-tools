@@ -19,6 +19,7 @@
     "html-beautify": "^1.0.4",
     "json-bigint": "^1.0.0",
     "json5": "^2.2.1",
+    "pako": "^2.0.4",
     "rollup": "^2.74.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-dts": "^4.2.2",
