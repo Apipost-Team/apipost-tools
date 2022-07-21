@@ -15,6 +15,7 @@ import successResult from './successResult';
 import errorResult from './errorResult';
 import beautifyRaw from './beautifyRaw';
 import bufferToRaw from './bufferToRaw';
+import completionHttpProtocol from './completionHttpProtocol'
 
 export {
   isJson,
@@ -34,6 +35,7 @@ export {
   errorResult,
   beautifyRaw,
   bufferToRaw,
+  completionHttpProtocol,
 }
 
 
@@ -55,5 +57,6 @@ export default {
   errorResult,
   beautifyRaw,
   bufferToRaw,
+  completionHttpProtocol,
 }
 

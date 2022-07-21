@@ -24,8 +24,7 @@
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-typescript": "^1.0.1",
-    "rollup-plugin-typescript2": "^0.31.2",
-    "zlib": "^1.0.5"
+    "rollup-plugin-typescript2": "^0.31.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",

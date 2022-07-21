@@ -1,13 +1,15 @@
-const BufferO = require('buffer/').Buffer
-const zlib = require('zlib');
+const Buffer = require('buffer/').Buffer,
+    pako = require('pako');
 
-const bufferToRaw = function (buffer:any, mime:any) {
-    let _inflateBuffer = null;
+const bufferToRaw = function (buffer: any, mime: any) {
+    let _inflateBuffer: any = null;
+
     try {
-        _inflateBuffer = zlib.inflateSync(BufferO.from(buffer))
+        _inflateBuffer = Buffer.from(pako.inflate(buffer))
     } catch (e) {
-        _inflateBuffer = BufferO.from(buffer);
+        _inflateBuffer = Buffer.from(buffer);
     }
+
     return {
         buffer: _inflateBuffer,
         raw: _inflateBuffer.toString(),
