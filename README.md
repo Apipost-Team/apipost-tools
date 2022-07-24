@@ -36,6 +36,7 @@ errorResult // 统一失败结果对象
 successResult // 统一成功结果对象
 bufferToRaw // buffer转raw
 completionHttpProtocol // 补齐http协议开头
+NewURL // 根据url生成url对象
 ```
 
 
