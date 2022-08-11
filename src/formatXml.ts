@@ -12,6 +12,10 @@ const setPrefix = function (prefixIndex: number) {
 export const formatXml = (xmlStr: string): string => {
   try {
     let text = xmlStr;
+    // 先去除原来的换行和空格
+    text = text.replace(/(\r\n)/g, '');
+    text = text.replace(/(\n)/g, '');
+    text = text.replace(/(\r)/g, '');
     // 使用replace去空格
     text = `\n${text.replace(/(<\w+)(\s.*?>)/g, function ($0, name, props) {
       return `${name} ${props.replace(/\s+(\w+=)/g, ' $1')}`;
