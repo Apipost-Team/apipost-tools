@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://adesign.apipost.cn/" target="_blank">
+    <img alt="A-Design Logo" width="360" src="https://img.cdn.apipost.cn/cdn/opensource/apipost-opensource.svg" />
+  </a>
+</p>
+
 apipost-tools 是一个一致性、模块化、高性能的 JavaScript 实用工具库。
 
 # 安装
