@@ -5,7 +5,7 @@ const bufferToRaw = function (buffer: any, mime: any) {
     let _inflateBuffer: any = null;
 
     try {
-        _inflateBuffer = Buffer.from(pako.inflate(buffer))
+        _inflateBuffer = Buffer.from(pako.inflate(Buffer.from(buffer)));
     } catch (e) {
         _inflateBuffer = Buffer.from(buffer);
     }
