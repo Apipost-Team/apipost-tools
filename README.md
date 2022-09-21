@@ -43,6 +43,7 @@ successResult // 统一成功结果对象
 bufferToRaw // buffer转raw
 completionHttpProtocol // 补齐http协议开头
 NewURL // 根据url生成url对象
+setObjValByPath // 根据对象路径给对象赋值，例如a.b.c  没有的属性会默认补上对象。
 ```
 
 

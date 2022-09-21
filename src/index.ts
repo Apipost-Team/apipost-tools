@@ -17,6 +17,7 @@ import beautifyRaw from './beautifyRaw';
 import bufferToRaw from './bufferToRaw';
 import completionHttpProtocol from './completionHttpProtocol'
 import NewURL from './NewURL';
+import setObjValByPath from './setObjValByPath';
 
 export {
   isJson,
@@ -38,6 +39,7 @@ export {
   bufferToRaw,
   completionHttpProtocol,
   NewURL,
+  setObjValByPath,
 }
 
 
@@ -61,5 +63,6 @@ export default {
   bufferToRaw,
   completionHttpProtocol,
   NewURL,
+  setObjValByPath,
 }
 
