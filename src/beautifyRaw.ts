@@ -9,10 +9,12 @@ import formatHtml from './formatHtml';
 import isJsonp from './isJsonp';
 import jsonp2Obj from './jsonp2Obj';
 
+
 export const beautifyRaw = (data: any) => {
   let beautifyRaw = '';
   let mode = 'text';
-  if (Object.prototype.toString.call(data) === '[object Object]') {  // 传入数据为对象
+  if (Object.prototype.toString.call(data) === '[object Object]') {
+    // 传入数据为对象
     try {
       beautifyRaw = JSONbig.stringify(data, null, '\t');
     } catch (error) {
@@ -48,13 +50,14 @@ export const beautifyRaw = (data: any) => {
         try {
           beautifyRaw = _obj[0] + JSON.stringify(JSON.parse(_obj[1]), null, '\t') + _obj[2];
         } catch (error) {
-          console.log(error, "美化JSONP失败");
+          console.log(error, '美化JSONP失败');
         }
       }
       mode = 'json';
     } else {
       try {
-        eval(data);
+       // eval(data);
+        eval(`(function sandbox(){ ${data} })`)
         mode = 'javascript';
       } catch (error) {
         mode = 'text';
