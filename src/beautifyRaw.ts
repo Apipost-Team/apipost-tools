@@ -1,5 +1,7 @@
 import JSONbig from 'json-bigint';
+import JSON5 from 'json5';
 import isJSON from './isJson';
+import isJSON5 from './isJson5';
 import isXml from './isXml';
 import formatXml from './formatXml';
 import isHtml from './isHtml';
@@ -18,7 +20,14 @@ export const beautifyRaw = (data: any) => {
     }
     mode = 'json';
   } else if (Object.prototype.toString.call(data) === '[object String]') { // 传入数据为字符串
-    if (isJSON(data)) {
+    if(isJSON5(data)){
+      try {
+        beautifyRaw = JSON.stringify(JSON5.parse(data), null, '\t');
+      } catch (error) {
+        beautifyRaw = JSON.stringify(JSON.parse(data), null, '\t');
+      }
+      mode = 'json';
+    }else if (isJSON(data)) {
       try {
         beautifyRaw = JSONbig.stringify(JSONbig.parse(data), null, '\t');
       } catch (error) {
