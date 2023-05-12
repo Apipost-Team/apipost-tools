@@ -21,7 +21,6 @@ describe('works', () => {
     }]
   }]
   const str = [1];
-  console.log(array2Tree(array));
   it('测试array2Tree pass', () => {
     expect(array2Tree(array)).toEqual(tree);
   });
