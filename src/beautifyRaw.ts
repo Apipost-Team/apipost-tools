@@ -8,7 +8,18 @@ import isHtml from './isHtml';
 import formatHtml from './formatHtml';
 import isJsonp from './isJsonp';
 import jsonp2Obj from './jsonp2Obj';
+import { isNumber } from 'lodash';
 
+const jsonOption = (a: any, b: any) => {
+  if (isNumber(b) && !Number.isSafeInteger(b)) {
+    return BigInt(b);
+  }
+  return b;
+};
+
+const stringifyOption = (key: any, value: any) => {
+  return typeof value === 'bigint' ? value.toString() : value;
+};
 
 export const beautifyRaw = (data: any) => {
   let beautifyRaw = '';
@@ -21,19 +32,20 @@ export const beautifyRaw = (data: any) => {
       beautifyRaw = JSON.stringify(data, null, '\t');
     }
     mode = 'json';
-  } else if (Object.prototype.toString.call(data) === '[object String]') { // 传入数据为字符串
-    if(isJSON5(data)){
+  } else if (Object.prototype.toString.call(data) === '[object String]') {
+    // 传入数据为字符串
+    if (isJSON5(data)) {
       try {
-        beautifyRaw = JSON.stringify(JSON5.parse(data), null, '\t');
+        beautifyRaw = JSONbig.stringify(JSON5.parse(data,jsonOption), null, '\t');
       } catch (error) {
-        beautifyRaw = JSON.stringify(JSON.parse(data), null, '\t');
+        beautifyRaw = JSONbig.stringify(JSON.parse(data,jsonOption), null, '\t');
       }
       mode = 'json';
-    }else if (isJSON(data)) {
+    } else if (isJSON(data)) {
       try {
         beautifyRaw = JSONbig.stringify(JSONbig.parse(data), null, '\t');
       } catch (error) {
-        beautifyRaw = JSON.stringify(JSON.parse(data), null, '\t');
+        beautifyRaw = JSONbig.stringify(JSON.parse(data), null, '\t');
       }
       mode = 'json';
     } else if (isXml(data)) {
@@ -56,8 +68,8 @@ export const beautifyRaw = (data: any) => {
       mode = 'json';
     } else {
       try {
-       // eval(data);
-        eval(`(function sandbox(){ ${data} })`)
+        // eval(data);
+        eval(`(function sandbox(){ ${data} })`);
         mode = 'javascript';
       } catch (error) {
         mode = 'text';
