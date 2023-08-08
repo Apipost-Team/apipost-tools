@@ -11,8 +11,12 @@ import jsonp2Obj from './jsonp2Obj';
 import { isNumber } from 'lodash';
 
 const jsonOption = (a: any, b: any) => {
-  if (isNumber(b) && !Number.isSafeInteger(b)) {
-    return BigInt(b);
+  try {
+     if (isNumber(b) && !Number.isSafeInteger(b)) {
+      return BigInt(b);
+    }
+  } catch(e) {
+    return b;
   }
   return b;
 };
