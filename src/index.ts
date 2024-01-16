@@ -18,6 +18,7 @@ import bufferToRaw from './bufferToRaw';
 import completionHttpProtocol from './completionHttpProtocol'
 import NewURL from './NewURL';
 import setObjValByPath from './setObjValByPath';
+import snowflakeId from './snowFlakeId';  
 
 export {
   isJson,
@@ -40,6 +41,7 @@ export {
   completionHttpProtocol,
   NewURL,
   setObjValByPath,
+  snowflakeId,
 }
 
 
@@ -64,5 +66,6 @@ export default {
   completionHttpProtocol,
   NewURL,
   setObjValByPath,
+  snowflakeId,
 }
 
