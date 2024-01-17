@@ -8,7 +8,7 @@
  * @param base - hash范围，2或16，2进制或16进制
  * @returns 以2进制或16进制表示的64位ID
  */
-export const snowflakeId = (seed: string, base: number): string => {
+export const snowflakeId = (seed="" , base=16): string => {
     //base 支持2,16 需要验证
     base = (base === 2 || base === 16) ? base : 16;
     seed = seed || genSeed();
