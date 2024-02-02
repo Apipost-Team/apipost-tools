@@ -36,7 +36,9 @@ export const snowflakeId = (seed="" , base=16): string => {
         let hexChunks = chunks.map(function (item) {
             return binHexMap[item];
         });
-        return hexChunks.join("");
+        //返回16进制
+        
+        return hexChunks.join("").replace(/^0+/, '');
     }
 
 
